@@ -7,50 +7,25 @@ export default function KFCHomepage() {
     {
       name: 'Original Recipe Chicken',
       description: 'Our signature crispy, juicy chicken.',
-      image: <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />,
+      image: <img src="https://kfcrestaurants.be/wp-content/uploads/2019/05/chick-n-share.jpg" alt="Original Recipe Chicken" className="rounded-xl w-16 h-16" />,
     },
     {
       name: 'Colonel Crispy Strips',
       description: 'Perfectly crispy chicken strips, perfect for sharing.',
-      image: <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />,
+      image: <img src="https://th.bing.com/th/id/OIP.44bzrFWIjfv6InzAjSB4uwHaFj?rs=1&pid=ImgDetMain" alt="Colonel Crispy Strips" className="rounded-xl w-16 h-16" />,
     },
     {
       name: 'KFC Bucket',
       description: 'A classic bucket of crispy, juicy chicken.',
-      image: <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />,
+      image: <img src="https://kfcrestaurants.be/wp-content/uploads/2019/05/chick-n-share.jpg" alt="KFC Bucket" className="rounded-xl w-16 h-16" />,
     },
-  ]
+  ];
+  
 
   return (
     <div className="bg-white text-gray-900">
       {/* Navigation Bar */}
-      <nav className="bg-red-600 p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-white font-bold text-lg">KFC</div>
-          <div className="hidden md:flex space-x-4">
-            <a href="#home" className="text-white hover:text-red-300">Home</a>
-            <a href="#menu" className="text-white hover:text-red-300">Menu</a>
-            <a href="#offers" className="text-white hover:text-red-300">Offers</a>
-            <a href="#locations" className="text-white hover:text-red-300">Locations</a>
-            <a href="#about" className="text-white hover:text-red-300">About Us</a>
-          </div>
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            ☰
-          </button>
-        </div>
-        {isMobileMenuOpen && (
-          <div className="md:hidden bg-red-600 p-4 space-y-2">
-            <a href="#home" className="text-white hover:text-red-300 block">Home</a>
-            <a href="#menu" className="text-white hover:text-red-300 block">Menu</a>
-            <a href="#offers" className="text-white hover:text-red-300 block">Offers</a>
-            <a href="#locations" className="text-white hover:text-red-300 block">Locations</a>
-            <a href="#about" className="text-white hover:text-red-300 block">About Us</a>
-          </div>
-        )}
-      </nav>
+      
 
       {/* Hero Section */}
       <section id="home" className="bg-red-600 text-white py-20">
