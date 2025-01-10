@@ -1,12 +1,12 @@
 import React from 'react'
-import { Mail, Phone, MapPin, Home, Menu, Users, Star } from "lucide-react"
+import { Mail, Phone, MapPin, Star } from "lucide-react"
 
 export default function KFCFooter() {
   return (
-    <footer className="bg-white text-gray-600 py-10">
-      <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between">
+    <footer className="py-10 text-gray-300 bg-black">
+      <div className="container flex flex-col justify-between px-4 mx-auto md:px-8 md:flex-row">
         <div className="mb-8 md:mb-0">
-          <h3 className="text-xl font-bold mb-4">Contact Information</h3>
+          <h3 className="mb-4 text-xl font-bold">Contact Information</h3>
           <div className="flex items-center mb-2">
             <Phone className="w-5 h-5 mr-2" />
             <a href="tel:+1234567890" className="hover:underline">+1 (234) 567-890</a>
@@ -21,7 +21,7 @@ export default function KFCFooter() {
           </div>
         </div>
         <div className="mb-8 md:mb-0">
-          <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+          <h3 className="mb-4 text-xl font-bold">Quick Links</h3>
           <ul className="space-y-2">
             <li>
               <a href="#" className="hover:underline">Home</a>
@@ -38,7 +38,7 @@ export default function KFCFooter() {
           </ul>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+          <h3 className="mb-4 text-xl font-bold">Follow Us</h3>
           <div className="flex space-x-4">
             <a href="https://facebook.com/kfc" target="_blank" rel="noopener noreferrer">
               <Star className="w-6 h-6 hover:text-blue-600" />
@@ -52,7 +52,7 @@ export default function KFCFooter() {
           </div>
         </div>
       </div>
-      <div className="mt-8 border-t border-gray-200 pt-4 text-center text-sm">
+      <div className="pt-4 mt-8 text-sm text-center border-t border-gray-300">
         © 2023 KFC. All rights reserved.
       </div>
     </footer>
