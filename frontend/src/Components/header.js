@@ -31,7 +31,7 @@ export default function KFCHeader() {
           <a href="#menu" className="text-gray-100 hover:text-red-400">Menu</a>
           <a href="#offers" className="text-gray-100 hover:text-red-400">Offers</a>
           <a href="/signup" className="text-gray-100 hover:text-red-400">SignUp</a>
-          <a href="#about" className="text-gray-100 hover:text-red-400">About Us</a>
+          <a href="/about" className="text-gray-100 hover:text-red-400">About Us</a>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-gray-100 hover:text-red-400">
@@ -45,7 +45,7 @@ export default function KFCHeader() {
           <a href="#menu" className="block px-4 py-2 text-gray-100 hover:bg-red-600">Menu</a>
           <a href="#offers" className="block px-4 py-2 text-gray-100 hover:bg-red-600">Offers</a>
           <a href="/signup" className="block px-4 py-2 text-gray-100 hover:bg-red-600">SignUp</a>
-          <a href="#about" className="block px-4 py-2 text-gray-100 hover:bg-red-600">About Us</a>
+          <a href="/about" className="block px-4 py-2 text-gray-100 hover:bg-red-600">About Us</a>
         </div>
       )}
     </header>
