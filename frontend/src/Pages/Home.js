@@ -7,32 +7,32 @@ export default function KFCHomepage() {
     {
       name: 'Original Recipe Chicken',
       description: 'Our signature crispy, juicy chicken.',
-      image: <img src="https://kfcrestaurants.be/wp-content/uploads/2019/05/chick-n-share.jpg" alt="Original Recipe Chicken" className="rounded-xl w-16 h-16" />,
+      image: <img src="https://i.postimg.cc/sxFzMBcg/cover-image-VYAJ3-I9-P-WIL05186-jpg-760x400-q85-crop-upscale.jpg" alt="Original Recipe Chicken" className="w-80 h-80 rounded-xl" />, // 20rem (320px)
     },
     {
       name: 'Colonel Crispy Strips',
       description: 'Perfectly crispy chicken strips, perfect for sharing.',
-      image: <img src="https://th.bing.com/th/id/OIP.44bzrFWIjfv6InzAjSB4uwHaFj?rs=1&pid=ImgDetMain" alt="Colonel Crispy Strips" className="rounded-xl w-16 h-16" />,
+      image: <img src="https://i.postimg.cc/br2vMc6s/KFC2-20211118114655.jpg" alt="Colonel Crispy Strips" className="w-80 h-80 rounded-xl" />, // 20rem (320px)
     },
     {
       name: 'KFC Bucket',
       description: 'A classic bucket of crispy, juicy chicken.',
-      image: <img src="https://kfcrestaurants.be/wp-content/uploads/2019/05/chick-n-share.jpg" alt="KFC Bucket" className="rounded-xl w-16 h-16" />,
+      image: <img src="https://i.postimg.cc/J7QkQTc5/brand-kfc-product.jpg" alt="KFC Bucket" className="w-80 h-80 rounded-xl" />, // 20rem (320px)
     },
   ];
-  
+
 
   return (
-    <div className="bg-white text-gray-900">
+    <div className="text-gray-900 bg-white">
       {/* Navigation Bar */}
       
 
       {/* Hero Section */}
-      <section id="home" className="bg-red-600 text-white py-20">
+      <section id="home" className="py-20 text-white bg-red-600">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-4">Welcome to KFC</h1>
-          <p className="text-lg mb-8">Experience the taste of KFC - crispy, juicy, and delicious.</p>
-          <a href="#menu" className="bg-white text-red-600 px-6 py-3 rounded-full font-bold hover:bg-red-100">
+          <h1 className="mb-4 text-4xl font-bold">Welcome to KFC</h1>
+          <p className="mb-8 text-lg">Experience the taste of KFC - crispy, juicy, and delicious.</p>
+          <a href="#menu" className="px-6 py-3 font-bold text-red-600 bg-white rounded-full hover:bg-red-100">
             Explore Menu
           </a>
         </div>
@@ -41,17 +41,17 @@ export default function KFCHomepage() {
       {/* Menu Highlight Section */}
       <section id="menu" className="py-20">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Popular Menu Items</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="mb-8 text-3xl font-bold">Popular Menu Items</h2>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {menuItems.map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+              <div key={index} className="p-6 text-center bg-white rounded-lg shadow-md">
                 {item.image}
-                <h3 className="text-xl font-bold mt-4">{item.name}</h3>
-                <p className="text-gray-600 mt-2">{item.description}</p>
+                <h3 className="mt-4 text-xl font-bold">{item.name}</h3>
+                <p className="mt-2 text-gray-600">{item.description}</p>
               </div>
             ))}
           </div>
-          <a href="#menu" className="mt-8 inline-block bg-red-600 text-white px-6 py-3 rounded-full font-bold hover:bg-red-700">
+          <a href="#menu" className="inline-block px-6 py-3 mt-8 font-bold text-white bg-red-600 rounded-full hover:bg-red-700">
             View Full Menu
           </a>
         </div>

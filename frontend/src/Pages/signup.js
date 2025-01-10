@@ -26,7 +26,7 @@ function SignUp() {
         <div className="w-full max-w-md p-6 bg-white rounded-md shadow-[0px_-10px_30px_rgba(0,0,0,0.1)]">
           <h2 className="mb-8 text-2xl font-bold">CREATE AN ACCOUNT</h2>
           <form className="m-4 space-y-6">
-       
+
             <div className="relative">
               <label htmlFor="firstName" className="block mb-2 text-sm text-left">
                 First Name*

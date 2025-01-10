@@ -24,16 +24,16 @@ export default function KFCFooter() {
           <h3 className="mb-4 text-xl font-bold">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:underline">Home</a>
+              <a href="/" className="hover:underline">Home</a>
             </li>
             <li>
               <a href="#" className="hover:underline">Menu</a>
             </li>
             <li>
-              <a href="#" className="hover:underline">Locations</a>
+              <a href="#" className="hover:underline">Location</a>
             </li>
             <li>
-              <a href="#" className="hover:underline">About Us</a>
+              <a href="/about" className="hover:underline">About Us</a>
             </li>
           </ul>
         </div>
