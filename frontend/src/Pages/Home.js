@@ -22,10 +22,6 @@ export default function KFCHomepage() {
   ];
 
 
-  
-  
-  
-
   return (
     <div className="text-gray-900 bg-white">
       {/* Navigation Bar */}
