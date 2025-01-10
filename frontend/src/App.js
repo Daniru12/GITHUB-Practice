@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import KFCHeader from "./Components/header";
 import KFCFooter from "./Components/footer";
 import Home from "./Pages/Home";
+import Signup from "./Pages/signup";
 
 function AppContent() {
   return (
@@ -17,6 +18,7 @@ function AppContent() {
         </header>
           <Routes>
             <Route path="/" element={<Home/>} />
+            <Route path="/signup" element={<Signup/>}/>
           </Routes>
           <footer>
             <KFCFooter/>
