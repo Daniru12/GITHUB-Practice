@@ -1,142 +1,102 @@
 import React, { useState } from "react";
+import { ShoppingCart } from "lucide-react";
+
+const products = [
+  {
+    id: 1,
+    title: "CHRISTMAS CHICKEN COMBO",
+    description: "06 H&C Chicken 06 hot drumlets 08 chicken nuggets",
+    price: 3990,
+    image: "https://i.postimg.cc/264HHdqm/download.jpg",
+  },
+  {
+    id: 2,
+    title: "NEW ULTIMATE BURGER COMBO",
+    description: "1 crispy fillet burger & H&C Drumsticks",
+    price: 3590,
+    image: "https://i.postimg.cc/ZnbLVGtF/download-1.jpg",
+  },
+  {
+    id: 3,
+    title: "CHRISTMAS RICE COMBO",
+    description: "4pc HC chicken 4 hot drumlets 4 rice pilaf, 8 chicken nuggets",
+    price: 3990,
+    image: "https://i.postimg.cc/ZnbLVGtF/download-1.jpg",
+  },
+  {
+    id: 4,
+    title: "CHRISTMAS BURGER COMBO",
+    description: "4 zinger burgers 6 chicken nuggets",
+    price: 3990,
+    image: "https://i.postimg.cc/ydBh8Md4/images.jpg",
+  },
+  {
+    id: 5,
+    title: "CHRISTMAS PARTY COMBO",
+    description: "15 Hot drumlets 09 crispy bites 09 chicken nuggets",
+    price: 3990,
+    image: "https://i.postimg.cc/1tQx53wm/images-3.jpg",
+  },
+];
 
 export default function OffersPage() {
-  const offers = [
-    {
-      name: "Sunday Special",
-      description: "Enjoy a 20% discount on 8 PC Buckets this weekend!",
-      imageUrl: "https://i.postimg.cc/264HHdqm/download.jpg", // Image for first offer
-    },
-    {
-      name: "Buy 1 Get 1 Free",
-      description: "Free dessert with any main course order!",
-      imageUrl: "https://i.postimg.cc/ZnbLVGtF/download-1.jpg", // Image for second offer
-    },
-    {
-      name: "Limited Time Offer",
-      description: "Order before 6 PM and get a free drink!",
-      imageUrl: "https://i.postimg.cc/ZnbLVGtF/download-1.jpg", // Image for third offer
-    },
-    {
-      name: "Group Discount",
-      description: "Groups of 4 or more get 10% off their bill!",
-      imageUrl: "https://i.postimg.cc/ydBh8Md4/images.jpg", // Image for fourth offer
-    },
-    {
-      name: "Movie Night Special",
-      description: "Enjoy a 2 pilaf Rice with every movie ticket purchase!",
-      imageUrl: "https://i.postimg.cc/1tQx53wm/images-3.jpg", // Image for fifth offer
-    },
-  ];
+  const [cartItems, setCartItems] = useState([]);
 
-  const [popup, setPopup] = useState(null); // State for popup
+  const addToCart = (product) => {
+    setCartItems([...cartItems, product]);
+  };
 
-  const handlePopup = (offer) => {
-    setPopup(offer);
+  const getCartTotal = () => {
+    return cartItems.reduce((total, item) => total + item.price, 0);
   };
 
   return (
-    <div className="p-6 bg-rose-50 min-h-screen">
-      <h1 className="text-3xl font-semibold text-gray-800 mb-6">Special Offers</h1>
-
-      {/* Offers Layout */}
-      <div className="flex justify-between gap-6">
-        {/* Left Side Offers */}
-        <div className="flex flex-col space-y-6 w-1/2">
-          {offers.slice(0, 3).map((offer, index) => (
-            <div
-              key={index}
-              className="flex items-center border rounded-lg shadow-md p-6"
-              style={{
-                backgroundColor: index % 2 === 0 ? "#FF4C4C" : "#FFEB8D", // Darker red and lighter yellow
-                cursor: "pointer", // Make it look clickable
-              }}
-              onClick={() => handlePopup(offer)} // Trigger popup on click
-            >
-              {/* Offer Image */}
-              <div className="flex-shrink-0">
-                <img
-                  src={offer.imageUrl}
-                  alt={offer.name}
-                  className={`object-cover rounded-lg ${
-                    index < 2 ? "h-40 w-40" : "h-36 w-36"
-                  }`} // Larger image size
-                />
-              </div>
-
-              {/* Offer Details */}
-              <div className="ml-6 flex-grow">
-                <h2
-                  className={`text-xl font-semibold ${
-                    index % 2 === 0 ? "text-white" : "text-red-600"
-                  }`}
-                >
-                  {offer.name}
-                </h2> {/* Change text color to white for red background */}
-                <p className="text-black text-base mt-1">{offer.description}</p> {/* Updated to black */}
-              </div>
+    <div className="min-h-screen bg-gray-50">
+      <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-[#B5121B]">KFC Christmas Specials</h1>
+          <div className="relative">
+            <ShoppingCart className="w-6 h-6" />
+            {cartItems.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-[#B5121B] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                {cartItems.length}
+              </span>
+            )}
+          </div>
+        </div>
+      </header>
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((product) => (
+            <div key={product.id} className="border p-4 rounded-lg shadow-lg">
+              <img src={product.image} alt={product.title} className="w-full h-48 object-cover rounded-md" />
+              <h3 className="text-lg font-semibold mt-4">{product.title}</h3>
+              <p className="text-sm text-gray-500">{product.description}</p>
+              <p className="text-xl font-bold text-[#B5121B] mt-2">Rs. {product.price.toLocaleString()}</p>
+              <button
+                onClick={() => addToCart(product)}
+                className="bg-[#B5121B] text-white py-2 px-6 rounded mt-4 hover:bg-[#8f0e16] transition-colors"
+              >
+                Add to Cart
+              </button>
             </div>
           ))}
         </div>
-
-        {/* Right Side Offers */}
-        <div className="flex flex-col space-y-6 w-1/2">
-          {offers.slice(3).map((offer, index) => {
-            let backgroundColor = "#FFEB8D"; // Default background color for 4th offer
-            if (index === 0) backgroundColor = "#FF4C4C"; // Red background for 5th offer
-            return (
-              <div
-                key={index + 3} // Adjust index for unique key
-                className="flex items-center border rounded-lg shadow-md p-6"
-                style={{
-                  backgroundColor: backgroundColor, // Conditional background color
-                  cursor: "pointer", // Make it look clickable
-                }}
-                onClick={() => handlePopup(offer)} // Trigger popup on click
-              >
-                {/* Offer Image */}
-                <div className="flex-shrink-0">
-                  <img
-                    src={offer.imageUrl}
-                    alt={offer.name}
-                    className={`object-cover rounded-lg ${
-                      index < 2 ? "h-40 w-40" : "h-36 w-36"
-                    }`} // Larger image size
-                  />
-                </div>
-
-                {/* Offer Details */}
-                <div className="ml-6 flex-grow">
-                  <h2
-                    className={`text-xl font-semibold ${
-                      index === 0 ? "text-white" : "text-red-600"
-                    }`}
-                  >
-                    {offer.name}
-                  </h2> {/* Change text color to white for red background */}
-                  <p className="text-black text-base mt-1">{offer.description}</p> {/* Updated to black */}
-                </div>
+        {cartItems.length > 0 && (
+          <div className="fixed bottom-0 left-0 right-0 bg-white shadow-up p-4">
+            <div className="max-w-7xl mx-auto flex justify-between items-center">
+              <div>
+                <p className="text-gray-600">Total: Rs. {getCartTotal().toLocaleString()}</p>
+                <p className="text-sm text-gray-500">Delivery Charge: Rs. 0</p>
+                <p className="text-sm text-gray-500">Packing Charge: Rs. 0</p>
               </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Popup */}
-      {popup && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
-            <h2 className="text-2xl font-semibold text-red-600">{popup.name}</h2> {/* Red text */}
-            <p className="text-black text-base mt-2">{popup.description}</p> {/* Updated to black */}
-            <button
-              onClick={() => setPopup(null)} // Close the popup
-              className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg"
-            >
-              Close
-            </button>
+              <button className="bg-[#B5121B] text-white py-2 px-6 rounded hover:bg-[#8f0e16] transition-colors">
+                Checkout Rs. {getCartTotal().toLocaleString()}
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </main>
     </div>
   );
 }
