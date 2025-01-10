@@ -120,7 +120,7 @@ function SignUp() {
             </button>
             <p className="text-sm text-center">
               Already a member?{" "}
-              <a href="#" className="text-[#DC0032] hover:underline">
+              <a href="/login" className="text-[#DC0032] hover:underline">
                 Sign In
               </a>
             </p>

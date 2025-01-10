@@ -7,6 +7,7 @@ import KFCHeader from "./Components/header";
 import KFCFooter from "./Components/footer";
 import Home from "./Pages/Home";
 import Signup from "./Pages/signup";
+import Login from "./Pages/login";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login/>}/>
         </Routes>
         <KFCFooter />
       </Router>
