@@ -9,6 +9,7 @@ import Home from "./Pages/Home";
 import Signup from "./Pages/signup";
 import Login from "./Pages/login";
 import AboutUs from './Pages/about';
+import OffersPage from './Pages/offer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/offers" element={<OffersPage />} />
         </Routes>
         <KFCFooter />
       </Router>
