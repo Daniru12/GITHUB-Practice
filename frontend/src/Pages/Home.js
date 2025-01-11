@@ -7,32 +7,35 @@ export default function KFCHomepage() {
     {
       name: 'Original Recipe Chicken',
       description: 'Our signature crispy, juicy chicken.',
-      image: <img src="https://i.postimg.cc/sxFzMBcg/cover-image-VYAJ3-I9-P-WIL05186-jpg-760x400-q85-crop-upscale.jpg" alt="Original Recipe Chicken" className="w-80 h-80 rounded-xl" />, // 20rem (320px)
+      image: <img src="https://i.postimg.cc/2yMz5KHR/kfc-fried-chicken-62e0ca.webp" alt="Original Recipe Chicken" className="w-80 h-80 rounded-xl" />, // 20rem (320px)
     },
     {
       name: 'Colonel Crispy Strips',
       description: 'Perfectly crispy chicken strips, perfect for sharing.',
-      image: <img src="https://i.postimg.cc/br2vMc6s/KFC2-20211118114655.jpg" alt="Colonel Crispy Strips" className="w-80 h-80 rounded-xl" />, // 20rem (320px)
+      image: <img src="https://i.postimg.cc/nVyrpXNs/crunchy-chicken-100-breast-meat-strips-kfc-styled.jpg" alt="Colonel Crispy Strips" className="w-80 h-80 rounded-xl" />, // 20rem (320px)
     },
     {
       name: 'KFC Bucket',
       description: 'A classic bucket of crispy, juicy chicken.',
-      image: <img src="https://i.postimg.cc/J7QkQTc5/brand-kfc-product.jpg" alt="KFC Bucket" className="w-80 h-80 rounded-xl" />, // 20rem (320px)
+      image: <img src="https://i.postimg.cc/QC0fg22w/kfc-periyar-nagar-jawahar-nagar-chennai-fast-food-weiayifzt2.avif" alt="KFC Bucket" className="w-80 h-80 rounded-xl" />, // 20rem (320px)
     },
   ];
 
-
   return (
     <div className="text-gray-900 bg-white">
-      {/* Navigation Bar */}
-      
-
       {/* Hero Section */}
-      <section id="home" className="py-20 text-white bg-red-600">
+      <section
+        id="home"
+        className="py-20 text-white bg-center bg-cover"
+        style={{
+          backgroundImage: "url('https://i.postimg.cc/rsb1gqpd/home-slider-3.jpg')",
+          backgroundBlendMode: "multiply",
+        }}
+      >
         <div className="container mx-auto text-center">
-          <h1 className="mb-4 text-4xl font-bold">Welcome to KFC</h1>
-          <p className="mb-8 text-lg">Experience the taste of KFC - crispy, juicy, and delicious.</p>
-          <a href="#menu" className="px-6 py-3 font-bold text-red-600 bg-white rounded-full hover:bg-red-100">
+          <h1 className="mb-4 text-4xl font-bold"><br/></h1>
+          <p className="mb-8 text-lg"><br/></p>
+          <a href="#menu" className="px-6 py-3 font-bold text-red-700 bg-white rounded-full hover:bg-red-100">
             Explore Menu
           </a>
         </div>
