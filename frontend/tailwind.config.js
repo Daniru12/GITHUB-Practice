@@ -26,8 +26,6 @@ module.exports = {
           secondary: '#F3F4F6',
           tertiary: '#E5E7EB',
         }
-      
-        
       },
       keyframes: {
         'fade-in-down': {
