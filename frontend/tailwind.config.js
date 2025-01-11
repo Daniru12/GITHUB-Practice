@@ -26,7 +26,7 @@ module.exports = {
           secondary: '#F3F4F6',
           tertiary: '#E5E7EB',
         },
-
+        footer : '#232323',
         offer : '#c0392b',
         offername : '#ecf0f1'
 
