@@ -51,7 +51,7 @@ export default function KFCHomepage() {
               </div>
             ))}
           </div>
-          <a href="#menu" className="inline-block px-6 py-3 mt-8 font-bold text-white bg-red-600 rounded-full hover:bg-red-700">
+          <a href="/menu" className="inline-block px-6 py-3 mt-8 font-bold text-white bg-red-600 rounded-full hover:bg-red-700">
             View Full Menu
           </a>
         </div>
