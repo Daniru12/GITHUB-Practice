@@ -25,7 +25,11 @@ module.exports = {
           primary: '#FFFFFF',
           secondary: '#F3F4F6',
           tertiary: '#E5E7EB',
-        }
+        },
+
+        offer : '#c0392b',
+        offername : '#ecf0f1'
+
       },
       keyframes: {
         'fade-in-down': {
