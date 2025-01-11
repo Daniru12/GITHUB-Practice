@@ -25,8 +25,8 @@ module.exports = {
           primary: '#FFFFFF',
           secondary: '#F3F4F6',
           tertiary: '#E5E7EB',
-        },
-        footer : '#232323'
+        }
+      
         
       },
       keyframes: {
