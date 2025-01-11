@@ -32,7 +32,7 @@ export default function KFCHomepage() {
         <div className="container mx-auto text-center">
           <h1 className="mb-4 text-4xl font-bold">Welcome to KFC</h1>
           <p className="mb-8 text-lg">Experience the taste of KFC - crispy, juicy, and delicious.</p>
-          <a href="#menu" className="px-6 py-3 font-bold text-red-600 bg-white rounded-full hover:bg-red-100">
+          <a href="/menu" className="px-6 py-3 font-bold text-red-600 bg-white rounded-full hover:bg-red-100">
             Explore Menu
           </a>
         </div>
