@@ -7,35 +7,35 @@ const products = [
     title: "CHRISTMAS CHICKEN COMBO",
     description: "06 H&C Chicken 06 hot drumlets 08 chicken nuggets",
     price: 3990,
-    image: "https://i.postimg.cc/264HHdqm/download.jpg",
+    image: "https://i.postimg.cc/sDKyxd1M/images.jpg",
   },
   {
     id: 2,
-    title: "NEW ULTIMATE BURGER COMBO",
+    title: "NEW ULTIMATE CHICKEN COMBO BUY 1 GET 1 FREE",
     description: "1 crispy fillet burger & H&C Drumsticks",
     price: 3590,
-    image: "https://i.postimg.cc/ZnbLVGtF/download-1.jpg",
+    image: "https://i.postimg.cc/4dT5tfSB/17225777884530049328954008459666648664384339733353562n.jpg",
   },
   {
     id: 3,
-    title: "CHRISTMAS RICE COMBO",
+    title: "NEW YEAR SPECIAL CHICKEN COMBO",
     description: "4pc HC chicken 4 hot drumlets 4 rice pilaf, 8 chicken nuggets",
     price: 3990,
-    image: "https://i.postimg.cc/ZnbLVGtF/download-1.jpg",
+    image: "https://i.postimg.cc/kgyW4ybJ/fried-chicken-wings-with-french-fries-tomato-74190-6309.avif",
   },
   {
     id: 4,
-    title: "CHRISTMAS BURGER COMBO",
+    title: "NEW YEAR BURGER COMBO",
     description: "4 zinger burgers 6 chicken nuggets",
     price: 3990,
-    image: "https://i.postimg.cc/ydBh8Md4/images.jpg",
+    image: "https://i.postimg.cc/7P294dq0/240-F-483780953-RIBq6n8-F3-NGAez-KJd6-ZTCO8mq-Sno-XNFS.jpg",
   },
   {
     id: 5,
-    title: "CHRISTMAS PARTY COMBO",
-    description: "15 Hot drumlets 09 crispy bites 09 chicken nuggets",
+    title: "NEW YEAR BURGER COMBO",
+    description: "15 Hot drumlets 2 burgers",
     price: 3990,
-    image: "https://i.postimg.cc/1tQx53wm/images-3.jpg",
+    image: "https://i.postimg.cc/Fz2wY4wL/240-F-653038305-a0-M2-Ide-Rww-Yz-Tp-ZIbb-B0-Rv-Qhy-ROGkqjf.jpg",
   },
 ];
 
@@ -52,9 +52,9 @@ export default function OffersPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm">
+      <header className="bg-offer">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-[#B5121B]">KFC Christmas Specials</h1>
+          <h1 className="text-2xl font-bold text-offername">KFC PROMOTIONS</h1>
           <div className="relative">
             <ShoppingCart className="w-6 h-6" />
             {cartItems.length > 0 && (
