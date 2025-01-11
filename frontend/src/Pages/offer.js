@@ -25,7 +25,7 @@ const products = [
   },
   {
     id: 4,
-    title: "NEW YEAR BURGER COMBO",
+    title: "NEW YEAR SPECIAL",
     description: "4 zinger burgers 6 chicken nuggets",
     price: 3990,
     image: "https://i.postimg.cc/7P294dq0/240-F-483780953-RIBq6n8-F3-NGAez-KJd6-ZTCO8mq-Sno-XNFS.jpg",
@@ -53,7 +53,7 @@ export default function OffersPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-offer">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="flex items-center justify-between px-4 py-4 mx-auto max-w-7xl">
           <h1 className="text-2xl font-bold text-offername">KFC PROMOTIONS</h1>
           <div className="relative">
             <ShoppingCart className="w-6 h-6" />
@@ -65,12 +65,12 @@ export default function OffersPage() {
           </div>
         </div>
       </header>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <main className="px-4 py-8 mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {products.map((product) => (
-            <div key={product.id} className="border p-4 rounded-lg shadow-lg">
-              <img src={product.image} alt={product.title} className="w-full h-48 object-cover rounded-md" />
-              <h3 className="text-lg font-semibold mt-4">{product.title}</h3>
+            <div key={product.id} className="p-4 border rounded-lg shadow-lg">
+              <img src={product.image} alt={product.title} className="object-cover w-full h-48 rounded-md" />
+              <h3 className="mt-4 text-lg font-semibold">{product.title}</h3>
               <p className="text-sm text-gray-500">{product.description}</p>
               <p className="text-xl font-bold text-[#B5121B] mt-2">Rs. {product.price.toLocaleString()}</p>
               <button
@@ -83,8 +83,8 @@ export default function OffersPage() {
           ))}
         </div>
         {cartItems.length > 0 && (
-          <div className="fixed bottom-0 left-0 right-0 bg-white shadow-up p-4">
-            <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <div className="fixed bottom-0 left-0 right-0 p-4 bg-white shadow-up">
+            <div className="flex items-center justify-between mx-auto max-w-7xl">
               <div>
                 <p className="text-gray-600">Total: Rs. {getCartTotal().toLocaleString()}</p>
                 <p className="text-sm text-gray-500">Delivery Charge: Rs. 0</p>
