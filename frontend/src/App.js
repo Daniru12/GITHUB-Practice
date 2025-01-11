@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import KFCHeader from "./Components/header";
 import KFCFooter from "./Components/footer";
 import Home from "./Pages/Home";
+import Menu from "./Pages/menu";
+
 
 function AppContent() {
   return (
@@ -17,6 +19,7 @@ function AppContent() {
         </header>
           <Routes>
             <Route path="/" element={<Home/>} />
+            <Route path="/menu" element={<Menu />} />
           </Routes>
           <footer>
             <KFCFooter/>
