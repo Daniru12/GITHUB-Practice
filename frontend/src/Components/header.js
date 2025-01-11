@@ -18,11 +18,11 @@ export default function KFCHeader() {
           </a>
         </div>
         <div className="hidden space-x-4 md:flex">
-          <a href="#home" className="text-gray-700 hover:text-red-600">Home</a>
+          <a href="/Home" className="text-gray-700 hover:text-red-600">Home</a>
           <a href="/menu" className="text-gray-700 hover:text-red-600">Menu</a>
-          <a href="#offers" className="text-gray-700 hover:text-red-600">Offers</a>
+          <a href="/offer" className="text-gray-700 hover:text-red-600">Offers</a>
           <a href="#locations" className="text-gray-700 hover:text-red-600">Locations</a>
-          <a href="#about" className="text-gray-700 hover:text-red-600">About Us</a>
+          <a href="/about" className="text-gray-700 hover:text-red-600">About Us</a>
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-gray-700 hover:text-red-600">
@@ -33,7 +33,7 @@ export default function KFCHeader() {
       {isMenuOpen && (
         <div className="py-2 space-y-2 bg-white md:hidden">
           <a href="#home" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
-          <a href="/menu" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Menu</a>
+          <a href="#menu" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Menu</a>
           <a href="#offers" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Offers</a>
           <a href="#locations" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Locations</a>
           <a href="#about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
