@@ -29,7 +29,7 @@ function Login() {
                               alt="KFC Logo"
                               className="w-auto h-16 mb-2"
                           />
-                          <h1 className="text-2xl font-bold text-gray-900">Sign in to KFC</h1>
+                          <h1 className="text-2xl font-bold text-gray-900">Login to KFC</h1>
                           <p className="text-sm text-gray-500">
                               Enter your details to continue
                           </p>
