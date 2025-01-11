@@ -21,7 +21,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/offers" element={<OffersPage />} />
+          <Route path="/offers" element={<OffersPage/>} />
         </Routes>
         <KFCFooter />
       </Router>
