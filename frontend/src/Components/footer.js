@@ -27,7 +27,7 @@ export default function KFCFooter() {
               <a href="/" className="hover:underline">Home</a>
             </li>
             <li>
-              <a href="#" className="hover:underline">Menu</a>
+              <a href="/menu" className="hover:underline">Menu</a>
             </li>
             <li>
               <a href="#" className="hover:underline">Location</a>
